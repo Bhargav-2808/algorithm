@@ -137,7 +137,7 @@ int dequeue(struct queue *b){
 }
 
 void queueDisplay(struct queue *b){
-    //for(int i=b->front;i!=b->rear;i=(i+1)%10){
+    
     if(b->rear>=b->front){
         for(int i=b->front;i<=b->rear;i++){
             printf("\t%d",b->que[i]);
@@ -158,9 +158,9 @@ void Stack1Data(){
     printf("\n.........LINKED-LIST-DATA.........\n");
     Display();
     printf("\n");
-    printf("\nEnter The Data For PipeLine, press 00 to quit:- ");
+    printf("\nEnter The Data For PipeLine, press 0 to quit:- ");
     scanf("%d",&userData);
-    if(userData==00 || userData==00){
+    if(userData==0){
         exit(1);
     }
     Insert(userData);
@@ -225,7 +225,6 @@ void main(){
         LinkListRange=Length();
     }
     printf("\n");
-    printf("\nPipeLine Begins.........");
     printf("\n");
 
     while(choice!="Q"){
